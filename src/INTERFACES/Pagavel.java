@@ -2,7 +2,6 @@ package INTERFACES;
 
 public interface Pagavel {
 
-    public void realizarPagamento();
+    public void prealizarPagamento();
     public void confirmarPagamento();
-
 }
