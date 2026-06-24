@@ -2,9 +2,11 @@ package interfaces;
 
 public interface Gerenciavel {
 
-    public void cadastrar();
-    public void editar();
-    public void excluir();
-    public void listar();
+    void cadastrar();
 
+    void editar();
+
+    void excluir();
+
+    void listar();
 }

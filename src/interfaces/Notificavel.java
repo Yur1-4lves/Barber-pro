@@ -2,7 +2,7 @@ package interfaces;
 
 public interface Notificavel {
 
-    public void enviarNotificacao();
-    public void receberNotificacao();
+    void enviarNotificacao(String mensagem);
 
+    void receberNotificacao(String mensagem);
 }

@@ -41,4 +41,4 @@ public class Administrador extends Usuario {
     public void setNivelAcesso(int nivelAcesso) {
         this.nivelAcesso = nivelAcesso;
     }
-}w
+}
