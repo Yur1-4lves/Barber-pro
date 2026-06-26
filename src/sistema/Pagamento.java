@@ -1,6 +1,6 @@
-package sistema;
+package SISTEMA;
 
-import interfaces.Pagavel;
+import INTERFACES.Pagavel;
 
 public class Pagamento implements Pagavel {
 
@@ -14,11 +14,12 @@ public class Pagamento implements Pagavel {
         statusPagamento = "PENDENTE";
     }
 
-    public Pagamento(int id,
-                     double valor,
-                     String formaPagamento,
-                     String dataPagamento) {
-
+    public Pagamento(
+            int id,
+            double valor,
+            String formaPagamento,
+            String dataPagamento
+    ) {
         this.id = id;
         this.valor = valor;
         this.formaPagamento = formaPagamento;
@@ -28,7 +29,6 @@ public class Pagamento implements Pagavel {
 
     @Override
     public boolean realizarPagamento() {
-
         statusPagamento = "PROCESSANDO";
         return true;
     }
@@ -39,11 +39,7 @@ public class Pagamento implements Pagavel {
     }
 
     public String gerarComprovante() {
-
-        return "Pagamento #" + id +
-                "\nValor: R$ " + valor +
-                "\nForma: " + formaPagamento +
-                "\nStatus: " + statusPagamento;
+        return "Pagamento #" + id + "\nValor: R$ " + valor + "\nForma: " + formaPagamento + "\nStatus: " + statusPagamento;
     }
 
     public int getId() {
