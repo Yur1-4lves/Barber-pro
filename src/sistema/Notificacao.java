@@ -1,6 +1,6 @@
-package sistema;
+package SISTEMA;
 
-import interfaces.Notificavel;
+import INTERFACES.Notificavel;
 
 public class Notificacao implements Notificavel {
 
@@ -13,11 +13,12 @@ public class Notificacao implements Notificavel {
     public Notificacao() {
     }
 
-    public Notificacao(int id,
-                       String mensagem,
-                       String destinatario,
-                       String dataEnvio) {
-
+    public Notificacao(
+            int id,
+            String mensagem,
+            String destinatario,
+            String dataEnvio
+    ) {
         this.id = id;
         this.mensagem = mensagem;
         this.destinatario = destinatario;
@@ -45,9 +46,6 @@ public class Notificacao implements Notificavel {
 
     @Override
     public String toString() {
-        return "Mensagem: " + mensagem +
-                "\nDestinatário: " + destinatario +
-                "\nData: " + dataEnvio +
-                "\nLida: " + lida;
+        return "Mensagem: " + mensagem + "\nDestinatário: " + destinatario + "\nData: " + dataEnvio + "\nLida: " + lida;
     }
 }
