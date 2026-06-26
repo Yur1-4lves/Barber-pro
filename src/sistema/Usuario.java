@@ -1,6 +1,6 @@
-package sistema;
+package SISTEMA;
 
-import interfaces.Autenticavel;
+import INTERFACES.Autenticavel;
 
 public abstract class Usuario implements Autenticavel {
 
@@ -10,12 +10,15 @@ public abstract class Usuario implements Autenticavel {
     private String telefone;
     private String senha;
 
-    public Usuario() {
-    }
+    public Usuario() {}
 
-    public Usuario(int id, String nome, String email,
-                   String telefone, String senha) {
-
+    public Usuario(
+            int id,
+            String nome,
+            String email,
+            String telefone,
+            String senha
+    ) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -25,8 +28,7 @@ public abstract class Usuario implements Autenticavel {
 
     @Override
     public boolean login(String email, String senha) {
-        return this.email.equals(email)
-                && this.senha.equals(senha);
+        return this.email.equals(email) && this.senha.equals(senha);
     }
 
     @Override
@@ -38,10 +40,11 @@ public abstract class Usuario implements Autenticavel {
         this.senha = novaSenha;
     }
 
-    public void atualizarDados(String nome,
-                               String email,
-                               String telefone) {
-
+    public void atualizarDados(
+            String nome,
+            String email,
+            String telefone
+    ) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -89,9 +92,6 @@ public abstract class Usuario implements Autenticavel {
 
     @Override
     public String toString() {
-        return "ID: " + id +
-                "\nNome: " + nome +
-                "\nEmail: " + email +
-                "\nTelefone: " + telefone;
+        return "ID: " + id + "\nNome: " + nome + "\nEmail: " + email + "\nTelefone: " + telefone;
     }
 }
