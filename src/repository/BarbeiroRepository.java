@@ -1,4 +1,4 @@
-package repository;
+package REPOSITORIES;
 
 import SISTEMA.Barbeiro;
 
@@ -14,15 +14,11 @@ public class BarbeiroRepository {
     }
 
     public void salvar(Barbeiro barbeiro) {
-
         for (Barbeiro b : barbeiros) {
+            boolean mesmoEmail = b.getEmail().equalsIgnoreCase(barbeiro.getEmail());
 
-            if (b.getEmail().equalsIgnoreCase(
-                    barbeiro.getEmail())) {
-
-                throw new RuntimeException(
-                        "E-mail já cadastrado."
-                );
+            if (mesmoEmail) {
+                throw new RuntimeException("E-mail já cadastrado.");
             }
         }
 
@@ -30,9 +26,7 @@ public class BarbeiroRepository {
     }
 
     public Barbeiro buscarPorId(int id) {
-
         for (Barbeiro barbeiro : barbeiros) {
-
             if (barbeiro.getId() == id) {
                 return barbeiro;
             }
@@ -46,7 +40,6 @@ public class BarbeiroRepository {
     }
 
     public void remover(int id) {
-
         Barbeiro barbeiro = buscarPorId(id);
 
         if (barbeiro != null) {
