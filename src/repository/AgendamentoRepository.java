@@ -1,4 +1,4 @@
-package repository;
+package REPOSITORIES;
 
 import SISTEMA.Agendamento;
 
@@ -18,9 +18,7 @@ public class AgendamentoRepository {
     }
 
     public void cancelar(int id) {
-
-        Agendamento agendamento =
-                buscarPorId(id);
+        Agendamento agendamento = buscarPorId(id);
 
         if (agendamento != null) {
             agendamento.cancelarAgendamento();
@@ -32,10 +30,7 @@ public class AgendamentoRepository {
     }
 
     public Agendamento buscarPorId(int id) {
-
-        for (Agendamento agendamento :
-                agendamentos) {
-
+        for (Agendamento agendamento : agendamentos) {
             if (agendamento.getId() == id) {
                 return agendamento;
             }
