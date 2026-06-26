@@ -1,4 +1,4 @@
-package sistema;
+package SISTEMA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,19 +13,19 @@ public class Barbeiro extends Usuario {
     private List<Avaliacao> avaliacoes;
 
     public Barbeiro() {
-
         agenda = new Agenda();
         avaliacoes = new ArrayList<>();
         disponibilidade = true;
     }
 
-    public Barbeiro(int id,
-                    String nome,
-                    String email,
-                    String telefone,
-                    String senha,
-                    String especialidade) {
-
+    public Barbeiro(
+            int id,
+            String nome,
+            String email,
+            String telefone,
+            String senha,
+            String especialidade
+    ) {
         super(id, nome, email, telefone, senha);
 
         this.especialidade = especialidade;
@@ -47,7 +47,6 @@ public class Barbeiro extends Usuario {
     }
 
     public double calcularNotaMedia() {
-
         if (avaliacoes.isEmpty())
             return 0;
 
@@ -85,9 +84,6 @@ public class Barbeiro extends Usuario {
 
     @Override
     public String toString() {
-
-        return super.toString() +
-                "\nEspecialidade: " + especialidade +
-                "\nNota Média: " + notaMedia;
+        return super.toString() + "\nEspecialidade: " + especialidade + "\nNota Média: " + notaMedia;
     }
 }
