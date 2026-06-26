@@ -1,4 +1,4 @@
-package repository;
+package REPOSITORIES;
 
 import SISTEMA.Cliente;
 
@@ -14,13 +14,10 @@ public class ClienteRepository {
     }
 
     public void salvar(Cliente cliente) {
-
         for (Cliente c : clientes) {
-
-            if (c.getEmail().equalsIgnoreCase(cliente.getEmail())) {
-                throw new RuntimeException(
-                        "E-mail já cadastrado."
-                );
+            boolean mesmoEmail = c.getEmail().equalsIgnoreCase(cliente.getEmail());
+            if (mesmoEmail) {
+                throw new RuntimeException("E-mail já cadastrado.");
             }
         }
 
@@ -28,9 +25,7 @@ public class ClienteRepository {
     }
 
     public Cliente buscarPorId(int id) {
-
         for (Cliente cliente : clientes) {
-
             if (cliente.getId() == id) {
                 return cliente;
             }
@@ -44,7 +39,6 @@ public class ClienteRepository {
     }
 
     public void remover(int id) {
-
         Cliente cliente = buscarPorId(id);
 
         if (cliente != null) {
@@ -53,10 +47,9 @@ public class ClienteRepository {
     }
 
     public Cliente buscarPorEmail(String email) {
-
         for (Cliente cliente : clientes) {
-
-            if (cliente.getEmail().equalsIgnoreCase(email)) {
+            boolean mesmoEmail = cliente.getEmail().equalsIgnoreCase(email);
+            if (mesmoEmail) {
                 return cliente;
             }
         }
