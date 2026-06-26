@@ -1,4 +1,4 @@
-package sistema;
+package SISTEMA;
 
 public class Agendamento {
 
@@ -15,13 +15,14 @@ public class Agendamento {
         status = "PENDENTE";
     }
 
-    public Agendamento(int id,
-                       Cliente cliente,
-                       Barbeiro barbeiro,
-                       Servico servico,
-                       String data,
-                       String horario) {
-
+    public Agendamento(
+            int id,
+            Cliente cliente,
+            Barbeiro barbeiro,
+            Servico servico,
+            String data,
+            String horario
+    ) {
         this.id = id;
         this.cliente = cliente;
         this.barbeiro = barbeiro;
@@ -39,9 +40,10 @@ public class Agendamento {
         status = "CANCELADO";
     }
 
-    public void reagendar(String novaData,
-                          String novoHorario) {
-
+    public void reagendar(
+            String novaData,
+            String novoHorario
+    ) {
         this.data = novaData;
         this.horario = novoHorario;
     }
@@ -80,7 +82,6 @@ public class Agendamento {
 
     @Override
     public String toString() {
-
         return "Agendamento #" + id +
                 "\nCliente: " + cliente.getNome() +
                 "\nBarbeiro: " + barbeiro.getNome() +
