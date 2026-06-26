@@ -1,4 +1,4 @@
-package repository;
+package REPOSITORIES;
 
 import SISTEMA.Pagamento;
 
@@ -18,10 +18,7 @@ public class PagamentoRepository {
     }
 
     public Pagamento buscarPagamento(int id) {
-
-        for (Pagamento pagamento :
-                pagamentos) {
-
+        for (Pagamento pagamento : pagamentos) {
             if (pagamento.getId() == id) {
                 return pagamento;
             }
