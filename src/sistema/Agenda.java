@@ -1,4 +1,4 @@
-package sistema;
+package SISTEMA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,6 @@ public class Agenda {
     private List<String> horariosDisponiveis;
 
     public Agenda() {
-
         listaAgendamentos = new ArrayList<>();
         horariosDisponiveis = new ArrayList<>();
     }
