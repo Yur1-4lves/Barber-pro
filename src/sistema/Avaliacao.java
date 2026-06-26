@@ -1,4 +1,4 @@
-package sistema;
+package SISTEMA;
 
 public class Avaliacao {
 
@@ -9,15 +9,15 @@ public class Avaliacao {
     private int nota;
     private String comentario;
 
-    public Avaliacao() {
-    }
+    public Avaliacao() {}
 
-    public Avaliacao(int id,
-                     Cliente cliente,
-                     Barbeiro barbeiro,
-                     int nota,
-                     String comentario) {
-
+    public Avaliacao(
+            int id,
+            Cliente cliente,
+            Barbeiro barbeiro,
+            int nota,
+            String comentario
+    ) {
         this.id = id;
         this.cliente = cliente;
         this.barbeiro = barbeiro;
@@ -52,7 +52,6 @@ public class Avaliacao {
 
     @Override
     public String toString() {
-        return "Nota: " + nota +
-                "\nComentário: " + comentario;
+        return "Nota: " + nota + "\nComentário: " + comentario;
     }
 }
