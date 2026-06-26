@@ -1,4 +1,4 @@
-package sistema;
+package SISTEMA;
 
 public class Servico {
 
@@ -11,9 +11,13 @@ public class Servico {
     public Servico() {
     }
 
-    public Servico(int id, String nome, String descricao,
-                   double preco, int duracao) {
-
+    public Servico(
+            int id,
+            String nome,
+            String descricao,
+            double preco,
+            int duracao
+    ) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -51,9 +55,6 @@ public class Servico {
 
     @Override
     public String toString() {
-        return "Serviço: " + nome +
-                "\nDescrição: " + descricao +
-                "\nPreço: R$ " + preco +
-                "\nDuração: " + duracao + " min";
+        return "Serviço: " + nome + "\nDescrição: " + descricao + "\nPreço: R$ " + preco + "\nDuração: " + duracao + " min";
     }
 }
