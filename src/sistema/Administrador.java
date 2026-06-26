@@ -1,20 +1,21 @@
-package sistema;
+package SISTEMA;
 
 public class Administrador extends Usuario {
 
     private int nivelAcesso;
 
-    public Administrador() {
-    }
+    public Administrador() {}
 
-    public Administrador(int id,
-                         String nome,
-                         String email,
-                         String telefone,
-                         String senha,
-                         int nivelAcesso) {
-
+    public Administrador(
+            int id,
+            String nome,
+            String email,
+            String telefone,
+            String senha,
+            int nivelAcesso
+    ) {
         super(id, nome, email, telefone, senha);
+
         this.nivelAcesso = nivelAcesso;
     }
 
