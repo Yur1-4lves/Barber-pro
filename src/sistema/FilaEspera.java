@@ -1,4 +1,4 @@
-package sistema;
+package SISTEMA;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -27,15 +27,10 @@ public class FilaEspera {
     }
 
     public void notificarCliente() {
-
         Cliente cliente = listaClientes.peek();
 
         if(cliente != null){
-            System.out.println(
-                    "Cliente " +
-                            cliente.getNome() +
-                            " possui vaga disponível."
-            );
+            System.out.println("Cliente " + cliente.getNome() + " possui vaga disponível.");
         }
     }
 
