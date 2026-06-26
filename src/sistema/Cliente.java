@@ -1,4 +1,4 @@
-package sistema;
+package SISTEMA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +13,13 @@ public class Cliente extends Usuario {
         listaAvaliacoes = new ArrayList<>();
     }
 
-    public Cliente(int id, String nome,
-                   String email, String telefone,
-                   String senha) {
-
+    public Cliente(
+            int id,
+            String nome,
+            String email,
+            String telefone,
+            String senha
+    ) {
         super(id, nome, email, telefone, senha);
 
         listaAgendamentos = new ArrayList<>();
@@ -32,7 +35,6 @@ public class Cliente extends Usuario {
     }
 
     public void visualizarAgendamentos() {
-
         for (Agendamento a : listaAgendamentos) {
             System.out.println(a);
         }
