@@ -1,4 +1,4 @@
-package CONTROLLERS;
+package controller;
 
 import REPOSITORIES.BarbeiroRepository;
 import SISTEMA.Barbeiro;
