@@ -1,12 +1,13 @@
-package interfaces;
+package INTERFACES;
+
+import SISTEMA.Agendamento;
 
 public interface Gerenciavel {
 
-    void cadastrar();
+    void realizarAgendamento(Agendamento agendamento);
 
-    void editar();
+    void cancelarAgendamento(Agendamento agendamento);
 
-    void excluir();
+    void visualizarAgendamentos();
 
-    void listar();
 }
