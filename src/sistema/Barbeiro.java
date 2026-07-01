@@ -10,11 +10,9 @@ public class Barbeiro extends Usuario {
     private double notaMedia;
     private boolean disponibilidade;
 
-    private List<Avaliacao> avaliacoes;
 
     public Barbeiro() {
         agenda = new Agenda();
-        avaliacoes = new ArrayList<>();
         disponibilidade = true;
     }
 
@@ -30,7 +28,6 @@ public class Barbeiro extends Usuario {
 
         this.especialidade = especialidade;
         this.agenda = new Agenda();
-        this.avaliacoes = new ArrayList<>();
         this.disponibilidade = true;
     }
 
@@ -46,25 +43,6 @@ public class Barbeiro extends Usuario {
         System.out.println("Agendamento confirmado.");
     }
 
-    public double calcularNotaMedia() {
-        if (avaliacoes.isEmpty())
-            return 0;
-
-        double soma = 0;
-
-        for (Avaliacao a : avaliacoes) {
-            soma += a.getNota();
-        }
-
-        notaMedia = soma / avaliacoes.size();
-
-        return notaMedia;
-    }
-
-    public void adicionarAvaliacao(Avaliacao avaliacao) {
-        avaliacoes.add(avaliacao);
-        calcularNotaMedia();
-    }
 
     public String getEspecialidade() {
         return especialidade;
@@ -84,6 +62,6 @@ public class Barbeiro extends Usuario {
 
     @Override
     public String toString() {
-        return super.toString() + "\nEspecialidade: " + especialidade + "\nNota Média: " + notaMedia;
+        return super.toString() + "\nEspecialidade: " + especialidade;
     }
 }
