@@ -7,7 +7,6 @@ public class Agendamento {
     private Barbeiro barbeiro;
     private Servico servico;
 
-    private String data;
     private String horario;
     private String status;
 
@@ -20,14 +19,12 @@ public class Agendamento {
             Cliente cliente,
             Barbeiro barbeiro,
             Servico servico,
-            String data,
             String horario
     ) {
         this.id = id;
         this.cliente = cliente;
         this.barbeiro = barbeiro;
         this.servico = servico;
-        this.data = data;
         this.horario = horario;
         this.status = "PENDENTE";
     }
@@ -41,10 +38,8 @@ public class Agendamento {
     }
 
     public void reagendar(
-            String novaData,
             String novoHorario
     ) {
-        this.data = novaData;
         this.horario = novoHorario;
     }
 
@@ -68,9 +63,6 @@ public class Agendamento {
         return servico;
     }
 
-    public String getData() {
-        return data;
-    }
 
     public String getHorario() {
         return horario;
@@ -86,7 +78,6 @@ public class Agendamento {
                 "\nCliente: " + cliente.getNome() +
                 "\nBarbeiro: " + barbeiro.getNome() +
                 "\nServiço: " + servico.getNome() +
-                "\nData: " + data +
                 "\nHorário: " + horario +
                 "\nStatus: " + status;
     }
