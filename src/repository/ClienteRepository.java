@@ -43,6 +43,8 @@ public class ClienteRepository {
 
         if (cliente != null) {
             clientes.remove(cliente);
+        }else{
+            System.out.println("Lista de clientes vazia.");
         }
     }
 
