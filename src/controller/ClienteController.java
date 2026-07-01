@@ -1,4 +1,4 @@
-package CONTROLLERS;
+package controller;
 
 import REPOSITORIES.ClienteRepository;
 import SISTEMA.Cliente;
