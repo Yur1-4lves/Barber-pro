@@ -1,4 +1,4 @@
-package MAIN;
+package main;
 
 import CONTROLLERS.AgendamentoController;
 import CONTROLLERS.BarbeiroController;
