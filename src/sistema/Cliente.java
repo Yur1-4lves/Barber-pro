@@ -6,24 +6,22 @@ import java.util.List;
 public class Cliente extends Usuario {
 
     private List<Agendamento> listaAgendamentos;
-    private List<Avaliacao> listaAvaliacoes;
+
 
     public Cliente() {
         listaAgendamentos = new ArrayList<>();
-        listaAvaliacoes = new ArrayList<>();
     }
 
     public Cliente(
-            int id,
+            int proximoId,
             String nome,
             String email,
             String telefone,
             String senha
     ) {
-        super(id, nome, email, telefone, senha);
+        super(proximoId, nome, email, telefone, senha);
 
         listaAgendamentos = new ArrayList<>();
-        listaAvaliacoes = new ArrayList<>();
     }
 
     public void realizarAgendamento(Agendamento agendamento) {
@@ -40,15 +38,8 @@ public class Cliente extends Usuario {
         }
     }
 
-    public void avaliarBarbeiro(Avaliacao avaliacao) {
-        listaAvaliacoes.add(avaliacao);
-    }
-
     public List<Agendamento> getListaAgendamentos() {
         return listaAgendamentos;
     }
 
-    public List<Avaliacao> getListaAvaliacoes() {
-        return listaAvaliacoes;
-    }
 }
