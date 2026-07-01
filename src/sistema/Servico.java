@@ -1,4 +1,4 @@
-package SISTEMA;
+package sistema;
 
 public class Servico {
 
