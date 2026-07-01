@@ -1,4 +1,4 @@
-package SERVICES;
+package service;
 
 import EXCEPTIONS.HorarioIndisponivelException;
 import REPOSITORIES.AgendamentoRepository;
