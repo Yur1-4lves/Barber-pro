@@ -44,6 +44,8 @@ public class BarbeiroRepository {
 
         if (barbeiro != null) {
             barbeiros.remove(barbeiro);
+        }else{
+            System.out.println("Lista de barbeiro vazia.");
         }
     }
 }
