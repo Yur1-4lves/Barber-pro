@@ -1,4 +1,4 @@
-package REPOSITORIES;
+package repository;
 
 import SISTEMA.Agendamento;
 
