@@ -7,40 +7,57 @@ public class Agenda {
 
     private Barbeiro barbeiro;
 
-    private List<Agendamento> listaAgendamentos;
-    private List<String> horariosDisponiveis;
+    private List<Agendamento> agendamentos;
+    private List<String> horariosDeTrabalho;
 
     public Agenda() {
-        listaAgendamentos = new ArrayList<>();
-        horariosDisponiveis = new ArrayList<>();
+        agendamentos = new ArrayList<>();
+        horariosDeTrabalho = new ArrayList<>();
     }
 
     public void adicionarHorario(String horario) {
-        horariosDisponiveis.add(horario);
+        horariosDeTrabalho.add(horario);
     }
 
     public void removerHorario(String horario) {
-        horariosDisponiveis.remove(horario);
+        horariosDeTrabalho.remove(horario);
     }
 
     public boolean verificarDisponibilidade(String horario) {
-        return horariosDisponiveis.contains(horario);
+        return listarHorariosLivres().contains(horario);
     }
 
-    public List<String> listarHorarios() {
-        return horariosDisponiveis;
+    private List<String> listarHorarios() {
+        return horariosDeTrabalho;
+    }
+
+    public List<String> listarHorariosLivres() {
+        List<String> horariosJaAgendados = new ArrayList<>();
+        for (Agendamento a: agendamentos) {
+            horariosJaAgendados.add(a.getHorario());
+        }
+
+        List<String> horariosLivres = new ArrayList<>();
+        for (String h : horariosDeTrabalho) {
+            if (!horariosJaAgendados.contains(h)) {
+                horariosLivres.add(h);
+            }
+        }
+
+        return horariosLivres;
+
     }
 
     public void adicionarAgendamento(Agendamento agendamento) {
-        listaAgendamentos.add(agendamento);
+        agendamentos.add(agendamento);
     }
 
-    public List<Agendamento> getListaAgendamentos() {
-        return listaAgendamentos;
+    public List<Agendamento> getAgendamentos() {
+        return agendamentos;
     }
 
     @Override
     public String toString() {
-        return listaAgendamentos.toString();
+        return agendamentos.toString();
     }
 }
